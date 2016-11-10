@@ -25,7 +25,7 @@ def prof_post_chat_message_display(barejid, resource, message):
 
 def prof_post_room_message_display(barejid, nick, message):
 	enabled = prof.settings_string_get("termuxnotify", "enabled", "on")
-	rooms = prof.settings_string_get("termuxnotify", "enabled", "off")
+	rooms = prof.settings_string_get("termuxnotify", "rooms", "off")
 	current_muc = prof.get_current_muc()
 	if rooms == "on":
 		if enabled == "on":
