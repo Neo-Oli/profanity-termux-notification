@@ -68,12 +68,12 @@ def _cmd_say(arg1=None, arg2=None):
 			prof.cons_show("termuxnotify plugin notifications for rooms set to: " + arg2)
 	else:
 		enabled = prof.settings_string_get("termuxnotify", "enabled", "off")
-		args = prof.settings_string_get("termuxnotify", "args", "")
+		rooms = prof.settings_string_get("termuxnotify", "rooms", "")
+		vibrate = prof.settings_string_get("termuxnotify", "vibrate", "")
 		prof.cons_show("Termuxnotify plugin settings:")
 		prof.cons_show("enabled : " + enabled)
-		if args != "":
-			prof.cons_show("args	: " + args)
-
+		prof.cons_show("vibrate : " + vibrate)
+		prof.cons_show("rooms : " + rooms)
 
 def prof_init(version, status, account_name, fulljid):
 	synopsis = [ 
