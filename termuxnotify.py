@@ -66,7 +66,7 @@ def _cmd_say(arg1=None, arg2=None):
 			prof.settings_string_set("termuxnotify", "rooms", arg2)
 			prof.cons_show("termuxnotify plugin notifications for rooms set to: " + arg2)
 	else:
-		enabled = prof.settings_string_get("termuxnotify", "enabled", "off")
+		enabled = prof.settings_string_get("termuxnotify", "enabled", "on")
 		rooms = prof.settings_string_get("termuxnotify", "rooms", "")
 		vibrate = prof.settings_string_get("termuxnotify", "vibrate", "")
 		prof.cons_show("Termuxnotify plugin settings:")
