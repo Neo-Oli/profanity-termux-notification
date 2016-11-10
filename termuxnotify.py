@@ -4,6 +4,7 @@ Display recieved messages as an Android Notification on Termux
 
 import prof
 import os
+import time
 from sys import platform
 
 def termuxnotify(sender,message):
@@ -11,6 +12,7 @@ def termuxnotify(sender,message):
 	os.system("termux-notification -t 'Profanity: {} says:' -c '{}'".format(sender,message))
 	if vibrate == "on":
 		os.system("termux-vibrate -d 400")
+		time.sleep(0.3)
 		os.system("termux-vibrate -d 400")
 
 
