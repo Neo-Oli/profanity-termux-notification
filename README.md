@@ -6,7 +6,7 @@ Plugin for Profanity to to enable Android notifications on Termux
 
 ## Requirements
 
-You can install [Profanity](http://profanity.im) in [Termux](http://termux.com) with `apt update && apt install profanity`. You also need [Termux API](https://play.google.com/store/apps/details?id=com.termux.api) and the termux-api package (`apt install termux-api`). 
+You can install [Profanity](http://profanity.im) in [Termux](http://termux.com) with `apt update && apt install profanity`. You also need [Termux:API](https://play.google.com/store/apps/details?id=com.termux.api) and the termux-api package (`apt install termux-api`). 
 
 
 ## Installation
