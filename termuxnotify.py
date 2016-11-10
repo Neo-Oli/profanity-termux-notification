@@ -8,7 +8,7 @@ from sys import platform
 
 def termuxnotify(sender,message):
 	vibrate = prof.settings_string_get("termuxnotify", "vibrate", "off")
-	os.system("termux-notification -t 'Profanity: {} says:' -c '{}'".format(sender,message)) 
+	os.system("termux-notification -t 'Profanity: {} says:' -c '{}'".format(sender,message))
 	if vibrate == "on":
 		os.system("termux-vibrate -d 400")
 		os.system("termux-vibrate -d 400")
@@ -37,7 +37,6 @@ def prof_post_room_message_display(barejid, nick, message):
 
 
 def prof_post_priv_message_display(barejid, nick, message):
-	# TODO add get current nick hook for private chats
 	if enabled:
 		termuxnotify(nick,message)
 
@@ -76,7 +75,7 @@ def _cmd_say(arg1=None, arg2=None):
 		prof.cons_show("rooms : " + rooms)
 
 def prof_init(version, status, account_name, fulljid):
-	synopsis = [ 
+	synopsis = [
 		"/termuxnotify on|off|active",
 		"/termuxnotify vibrate on|off",
 		"/termuxnotify rooms on|off"
@@ -85,8 +84,8 @@ def prof_init(version, status, account_name, fulljid):
 	args = [
 		[ "on|off",		 "Enable/disable termuxnotify for all windows" ],
 		[ "active",		 "Enable termuxnotify for active window only" ],
-    [ "vibrate <args>",    "Turn vibrate on or off" ],
-    [ "rooms <args>",    "Turn notifications for rooms on or off" ]
+		[ "vibrate <args>",    "Turn vibrate on or off" ],
+		[ "rooms <args>",    "Turn notifications for rooms on or off" ]
 	]
 	examples = []
 
