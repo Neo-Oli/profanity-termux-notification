@@ -15,7 +15,7 @@ You can install [Profanity](http://profanity.im) in [Termux](http://termux.com) 
 
 2. Launch Profanity
 
-3. Install the plugin with the following command.
+3. Install the plugin with the following command
 
 ```
 /plugins install ~/profanity-termux-notification/termuxnotify.py
