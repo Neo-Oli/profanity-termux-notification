@@ -1,7 +1,7 @@
 # profanity-termux-notification
 Plugin for Profanity to to enable Android notifications on Termux
 
-[]!([https://raw.githubusercontent.com/Neo-Oli/profanity-termux-notification/master/screenshot.png)
+![Screenshot](screenshot.png)
 
 ## Installation
 
