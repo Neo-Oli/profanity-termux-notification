@@ -93,3 +93,5 @@ def prof_init(version, status, account_name, fulljid):
 
 	prof.register_command("/termuxnotify", 0, 2, synopsis, description, args, examples, _cmd_say)
 	prof.completer_add("/termuxnotify", [ "on", "off","active","vibrate","rooms" ])
+	prof.completer_add("/termuxnotify vibrate", [ "on", "off" ])
+	prof.completer_add("/termuxnotify rooms", [ "on", "off" ])
