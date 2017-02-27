@@ -7,9 +7,14 @@ import os
 import time
 from sys import platform
 
+def secure(string):
+    string=string.replace("'","’")
+    string=string.replace('\\','\\\\')
+    return string
+
 def termuxnotify(sender,message):
 	vibrate = prof.settings_string_get("termuxnotify", "vibrate", "off")
-	os.system("termux-notification -t 'Profanity: {} says:' -c '{}'".format(sender,message))
+	os.system("termux-notification -t 'Profanity: {} says:' -c '{}'".format(secure(sender),secure(message)))
 	if vibrate == "on":
 		os.system("termux-vibrate -d 400")
 		time.sleep(0.3)
